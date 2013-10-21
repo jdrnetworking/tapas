@@ -1,3 +1,102 @@
 #!/usr/bin/env ruby
 
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
+Bundler.require(:default) if defined?(Bundler)
+
 require 'tapas'
+require 'optparse'
+
+options = { last: true, episodes: [] }
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename($0)} [-l] [-n episode[-episode] ] [-t title] [-d description] [-s search]"
+
+  opts.separator ''
+
+  opts.on('-l', '--list-only', 'List episode(s) to be downloaded without downloading them') do
+    options[:list_only] = true
+  end
+
+  opts.on('-a', '--all', 'Select all episodes') do |all|
+    options.delete(:last)
+    options[:all] = true
+  end
+
+  opts.on('-n', '--episode N[-M]', 'Select episode(s) N [through M]') do |episode|
+    options.delete(:last)
+    if episode.include?('-')
+      first, last = episode.split('-').map(&:to_i)
+      options[:episodes] += (first..last).to_a
+    else
+      options[:episodes] << episode.to_i
+    end
+  end
+
+  opts.on('-t', '--title TERM', 'Select episodes with TERM in the title') do |term|
+    options.delete(:last)
+    options[:title] = term
+  end
+
+  opts.on('-d', '--description TERM', 'Select episodes with TERM in the description') do |term|
+    options.delete(:last)
+    options[:description] = term
+  end
+
+  opts.on('-s', '--search TERM', 'Select episodes with TERM in the title or description') do |term|
+    options.delete(:last)
+    options[:search] = term
+  end
+
+  opts.on('-q', '--quiet', 'Output nothing except errors') do |quiet|
+    options[:quiet] = quiet
+  end
+
+  opts.on('--feed-file FILE', 'Use local file instead of downloading feed') do |file|
+    options[:feed_file] = file
+  end
+
+  opts.separator ''
+  opts.separator 'With no arguments, downloads the last episode'
+  opts.separator ''
+
+  opts.on_tail('-c', '--config', 'Show configuration options') do
+    options[:show_config] = true
+  end
+
+  opts.on_tail('-h', '--help', 'Show this message') do
+    puts opts
+    exit 1
+  end
+
+  opts.on_tail('--version') do
+    puts "Tapas #{Tapas::VERSION}"
+    exit 0
+  end
+end.parse!
+
+config = Tapas::Config.new(options)
+
+if config.show_config
+  config.delete_setting :show_config
+  puts config
+  exit
+end
+
+begin
+  feed_source = Tapas::FeedSource.new(config)
+  collection = Tapas::EpisodeCollection.new(feed_source)
+  filter = Tapas::EpisodeFilter.new(collection, config)
+
+  filter.episodes.each do |episode|
+    puts "  #{episode}" unless config.quiet
+    next if config.list_only
+    Tapas::Downloader.new(episode, config).download
+  end
+rescue Tapas::UnauthorizedError
+  puts "Uh oh! It looks like the feed requires authentication."
+  if config.username && config.password
+    puts "Your username and/or password were not accepted."
+  else
+    puts "No username or password were supplied. Set them in #{config.default_path}"
+  end
+end

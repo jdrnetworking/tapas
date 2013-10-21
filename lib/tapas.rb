@@ -1,5 +1,7 @@
-require "tapas/version"
-
-module Tapas
-  # Your code goes here...
-end
+require_relative "tapas/exceptions"
+require_relative "tapas/config"
+require_relative "tapas/feed_source"
+require_relative "tapas/episode"
+require_relative "tapas/episode_collection"
+require_relative "tapas/episode_filter"
+require_relative "tapas/downloader"

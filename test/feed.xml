@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>RubyTapas</title>
+    <link>https://rubytapas.dpdcart.com/subscriber/content</link>
+    <description/>
+    <pubDate>Thu, 17 Oct 2013 19:14:00 -0400</pubDate>
+    <managingEditor>contact@shiprise.net (Avdi Grimm)</managingEditor>
+    <language>en</language>
+    <copyright>Copyright 2013 RubyTapas</copyright>
+    <generator>getdpd.com</generator>
+    <itunes:summary>RubyTapas: Small plates of gourmet code.</itunes:summary>
+    <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    <image>
+      <url>https://getdpd.com/uploads/ruby-tapas.png</url>
+      <title>Ruby Tapas</title>
+      <link>https://rubytapas.dpdcart.com/subscriber/content</link>
+      <width>849</width>
+      <height>849</height>
+    </image>
+    <item>
+      <title><![CDATA[005 Array Literals]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=27</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Composing command lines with fancy array literals.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=38">RubyTapas005.mp4</a></li>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=39">005-array-literals.html</a></li>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=40">005-array-literals.rb</a></li>
+          </ul></div>]]></description>
+      <guid isPermaLink="false">dpd-fc854d43484d212cf08a36fd13e5cf8c7fa427d5</guid>
+      <pubDate>Wed, 03 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/38/RubyTapas005.mp4" length="28831935" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[004 Barewords]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=26</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this longer-than-usual episode, some thoughts on how to enable method logic to remain stable and unchanged while evolving and changing the source and scope of the values used by the logic.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=43">barewords.rb</a></li>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=44">barewords.html</a></li>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=45">RubyTapas-Barewords.mp4</a></li>
+          </ul></div>]]></description>
+      <guid isPermaLink="false">dpd-79af0936dda4a452fa19be8b54aecd2cb1885e2f</guid>
+      <pubDate>Mon, 01 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/45/RubyTapas-Barewords.mp4" length="106907561" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[003 Character Literals]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=21</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Character literal syntax in Ruby.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=32">RubyTapas003.mp4</a></li>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=33">003-char-literals.html</a></li>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=34">003-char-literals.rb</a></li>
+          </ul></div>]]></description>
+      <guid isPermaLink="false">dpd-ed1f01e1872210288982a61742c81df4c7905a4b</guid>
+      <pubDate>Fri, 28 Sep 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/32/RubyTapas003.mp4" length="6910954" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[002 Large Integer&lt;Literals]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=20</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>How to format big numbers&lt;so that they are readable.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=29">RubyTapas002.mp4</a></li>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=30">002-large-integer-literals.html</a></li>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=31">002-large-integer-literals.rb</a></li>
+          </ul></div>]]></description>
+      <guid isPermaLink="false">dpd-8652bee88eb6fad318e874a29a26513083d47bab</guid>
+      <pubDate>Wed, 26 Sep 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/29/RubyTapas002.mp4" length="4258184" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[001 Binary Literals]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=18</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this inaugural episode, a look at a handy syntax for writing out binary numbers.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=25">RubyTapas001.mp4</a></li>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=26">001-binary-literals.html</a></li>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=27">001-binary-literals.rb</a></li>
+          </ul></div>]]></description>
+      <guid isPermaLink="false">dpd-89e8004c8242e7ad548833bef1e18a5b575c92c1</guid>
+      <pubDate>Mon, 24 Sep 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/25/RubyTapas001.mp4" length="12502397" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+  </channel>
+</rss>
