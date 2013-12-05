@@ -41,8 +41,20 @@ module Tapas
 
     def progress_proc
       ->(size) {
-        progress_bar.progress = size if progress_bar
+        update_progress(progress_bar, size)
       }
+    end
+
+    def update_progress(progress_bar, size)
+      return unless progress_bar
+
+      progress_bar.total = nil if progress_bar.total && size > progress_bar.total
+
+      if progress_bar.total
+        progress_bar.progress = size
+      else
+        progress_bar.increment
+      end
     end
   end
 end
